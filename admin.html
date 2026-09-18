@@ -1,0 +1,14 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Administration | BIOMED-TOGO</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="header"><div class="container nav"><a class="logo" href="index.html">BIOMED-<span>TOGO</span></a><a href="index.html">← Retour au site</a></div></header>
+<main class="section"><div class="container narrow"><span class="eyebrow">ADMINISTRATION</span><h2>Gestion du catalogue</h2>
+<div id="login"><p>Cette version gratuite utilise une administration locale dans le navigateur. Pour un vrai espace sécurisé multi-utilisateurs, il faudra connecter une base de données et une authentification.</p><input id="pass" type="password" placeholder="Mot de passe démo"><button class="btn primary" onclick="login()">Accéder</button><small>Mot de passe démo : biomed2026</small></div>
+<div id="panel" style="display:none"><div class="info-card"><h3>Ajouter / modifier un produit</h3><input id="pid" type="hidden"><input id="pn" placeholder="Nom du produit"><input id="pc" placeholder="Catégorie"><input id="pd" placeholder="Description"><input id="pp" placeholder="Prix"><select id="ps"><option>Disponible</option><option>Bientôt disponible</option></select><button class="btn primary" onclick="saveProduct()">Enregistrer</button></div><h3>Produits</h3><div id="list"></div></div>
+</div></main><script>
+let ps=JSON.parse(localStorage.getItem("biomed_products")||"null")||[];
+function login(){if(document.getElementById("pass").value==="biomed2026"){document.getElementById("login").style.display="none";document.getElementById("panel").style.display="block";render()}else alert("Mot de passe incorrect.");}
+function saveProduct(){let id=document.getElementById("pid").value;let p={id:id?+id:Date.now(),name:pn.value,cat:pc.value||"Autres",desc:pd.value,price:pp.value||"Sur demande",status:ps.value};if(id)ps=ps.map(x=>x.id==id?p:x);else ps.push(p);localStorage.setItem("biomed_products",JSON.stringify(ps));clear();render()}
+function edit(id){let p=ps.find(x=>x.id==id);pid.value=p.id;pn.value=p.name;pc.value=p.cat;pd.value=p.desc;pp.value=p.price;ps.value=p.status}
+function del(id){if(confirm("Supprimer ce produit ?")){ps=ps.filter(x=>x.id!=id);localStorage.setItem("biomed_products",JSON.stringify(ps));render()}}
+function clear(){pid.value="";pn.value=pc.value=pd.value=pp.value="";ps.value="Disponible"}
+function render(){document.getElementById("list").innerHTML=ps.map(p=>`<div class="info-card" style="margin:10px 0"><b>${p.name}</b><br>${p.cat} — ${p.price} — ${p.status}<br><button class="btn ghost" onclick="edit(${p.id})">Modifier</button> <button class="btn" onclick="del(${p.id})">Supprimer</button></div>`).join("")}
+</script></body></html>

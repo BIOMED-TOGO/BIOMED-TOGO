@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BIOMED-TOGO | La maison du Biomédical</title>
+<meta name="description" content="BIOMED-TOGO - dispositifs médicaux, consommables biomédicaux, réactifs et matériels de laboratoire au Togo.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#accueil">BIOMED-<span>TOGO</span></a>
+    <nav><a href="#accueil">Accueil</a><a href="#produits">Produits</a><a href="#commande">Commander</a><a href="#partenaires">Partenaires</a><a href="#contact">Contact</a></nav>
+    <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<main>
+<section id="accueil" class="hero">
+ <div class="container hero-grid">
+  <div>
+   <div class="badge">🇹🇬 Votre partenaire biomédical au Togo</div>
+   <h1>La maison du <span>Biomédical</span></h1>
+   <p>Dispositifs médicaux, consommables, réactifs et équipements de laboratoire. Des solutions adaptées aux professionnels de santé et aux revendeurs.</p>
+   <div class="actions"><a class="btn primary" href="#produits">Voir les produits</a><a class="btn ghost" href="#commande">Passer une commande</a></div>
+  </div>
+  <div class="hero-card"><div class="circle">🧪</div><h3>BIOMED-TOGO</h3><p>Qualité • Disponibilité • Proximité</p></div>
+ </div>
+</section>
+
+<section class="stats"><div class="container stats-grid">
+<div><b>+100</b><small>Références</small></div><div><b>24/7</b><small>Prise de demandes</small></div><div><b>Togo</b><small>Livraison selon zone</small></div><div><b>Pro</b><small>Tarifs partenaires</small></div>
+</div></section>
+
+<section id="produits" class="section"><div class="container">
+<div class="section-head"><div><span class="eyebrow">CATALOGUE</span><h2>Nos produits</h2></div><input id="search" placeholder="Rechercher un produit…" oninput="renderProducts()"></div>
+<div id="filters" class="filters"></div><div id="products" class="products"></div>
+</div></section>
+
+<section id="commande" class="section alt"><div class="container narrow">
+<span class="eyebrow">COMMANDE</span><h2>Exprimez votre besoin</h2>
+<p>Les stocks peuvent être limités. Pour les produits bientôt disponibles, pensez à exprimer vos besoins à l'avance auprès de nos secrétaires.</p>
+<form id="orderForm">
+<input required id="name" placeholder="Nom / Structure">
+<input required id="phone" placeholder="Téléphone / WhatsApp">
+<textarea required id="items" rows="5" placeholder="Produits et quantités souhaitées"></textarea>
+<button class="btn primary" type="submit">Envoyer la demande sur WhatsApp</button>
+</form>
+</div></section>
+
+<section id="partenaires" class="section"><div class="container two">
+<div><span class="eyebrow">PARTENAIRES & REVENDEURS</span><h2>Travaillez avec BIOMED-TOGO</h2><p>Vous êtes revendeur, laboratoire, clinique, cabinet ou structure de santé ? Envoyez-nous vos besoins pour connaître les disponibilités et conditions partenaires.</p><a class="btn primary" href="#commande">Devenir partenaire</a></div>
+<div class="info-card"><h3>Stocks limités ?</h3><p>Quand un produit vous intéresse, transmettez votre besoin en avance. Nous pourrons mieux anticiper les prochaines arrivées.</p><strong>📦 Disponibilité à confirmer</strong></div>
+</div></section>
+
+<section class="section alt"><div class="container two">
+<div><span class="eyebrow">À PROPOS</span><h2>BIOMED-TOGO</h2><p>Société de distribution de dispositifs médicaux, consommables biomédicaux, réactifs, matériels biomédicaux et de laboratoire.</p></div>
+<div class="info-card"><h3>Notre engagement</h3><ul><li>Produits et références adaptés aux besoins professionnels</li><li>Réponse rapide aux demandes</li><li>Accompagnement des partenaires et revendeurs</li><li>Information sur les disponibilités</li></ul></div>
+</div></section>
+
+<section id="contact" class="section"><div class="container contact">
+<div><span class="eyebrow">CONTACT</span><h2>Parlons de votre besoin</h2><p>📧 biomedtogosarl@gmail.com</p><p>📱 WhatsApp : contactez nos secrétaires</p><p>📍 Togo</p></div>
+<div class="contact-buttons"><a class="btn primary" href="mailto:biomedtogosarl@gmail.com">Envoyer un e-mail</a><a class="btn whatsapp" href="https://wa.me/22800000000" target="_blank">WhatsApp</a><a class="admin-link" href="admin.html">Administration →</a></div>
+</div></section>
+</main>
+<footer><div class="container"><strong>BIOMED-TOGO</strong><span>La maison du Biomédical</span><small>© 2026 BIOMED-TOGO. Tous droits réservés.</small></div></footer>
+<script src="app.js"></script>
+</body></html>
