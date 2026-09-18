@@ -1,17 +1,16 @@
-BIOMED-TOGO — SITE WEB GRATUIT
-=================================
+BIOMED-TOGO - Site web gratuit
 
-Fichiers :
-- index.html : site public
-- style.css : design responsive
-- app.js : catalogue + recherche + commande
-- admin.html : administration locale de démonstration
+WhatsApp : +228 97 57 13 03
+E-mail : biomedtogosarl@gmail.com
 
-IMPORTANT :
-1. Remplacer le numéro WhatsApp 22897571303 dans index.html et app.js par le vrai numéro WhatsApp de BIOMED-TOGO.
-2. L'administration actuelle est une démo locale : les modifications sont enregistrées dans le navigateur (localStorage).
-3. Le mot de passe démo est biomed2026. NE PAS utiliser ce système comme sécurité réelle.
-4. Pour une vraie administration accessible depuis plusieurs téléphones/ordinateurs, il faudra ajouter une base de données + authentification.
+ESPACE ADMIN : admin.html
+Mot de passe admin actuel : cherif2019
 
-Mise en ligne gratuite :
-Le dossier peut être publié sur un hébergement statique gratuit comme GitHub Pages. Le site n'a pas besoin de serveur pour sa partie publique.
+Fonctions de l'espace admin :
+- ajouter, modifier et supprimer des produits
+- ajouter/remplacer/supprimer l'image d'un produit
+- ajouter/remplacer/supprimer le logo BIOMED-TOGO
+- ajouter, modifier et supprimer des partenaires
+- ajouter/supprimer le logo d'un partenaire
+
+IMPORTANT : cette administration utilise le stockage local du navigateur (localStorage). Les changements ne constituent PAS une base de données en ligne multi-utilisateurs. Pour une vraie administration accessible depuis plusieurs téléphones/ordinateurs, il faudra connecter une base de données et une authentification serveur.
